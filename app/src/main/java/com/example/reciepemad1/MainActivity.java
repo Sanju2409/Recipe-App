@@ -1,6 +1,7 @@
 package com.example.reciepemad1;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.reciepemad1.Adapter.RandomReciepeAdapter;
 import com.example.reciepemad1.Listeners.RandomRecipeResponseListener;
+import com.example.reciepemad1.Listeners.RecipeClickLisreners;
 import com.example.reciepemad1.Models.RandomReciepeApiResponse;
 
 import java.util.ArrayList;
@@ -81,7 +83,7 @@ SearchView searchView;
             recyclerView=findViewById(R.id.recycler_random);
             recyclerView.setHasFixedSize(true);
             recyclerView.setLayoutManager(new GridLayoutManager(MainActivity.this,1));
-            randomReciepeAdapter=new RandomReciepeAdapter(MainActivity.this,response.recipes);
+            randomReciepeAdapter=new RandomReciepeAdapter(MainActivity.this,response.recipes,recipeClickLisreners);
             recyclerView.setAdapter(randomReciepeAdapter);
         }
 
@@ -102,6 +104,12 @@ dailog.show();
       @Override
       public void onNothingSelected(AdapterView<?> parent) {
 
+      }
+  };
+  private final RecipeClickLisreners recipeClickLisreners=new RecipeClickLisreners() {
+      @Override
+      public void onRecipeClicked(String id) {
+        startActivity(new Intent(MainActivity.this,RecipeDetailsActivity.class).putExtra("id",id));
       }
   };
 }
