@@ -6,6 +6,7 @@ import com.example.reciepemad1.Listeners.RandomRecipeResponseListener;
 import com.example.reciepemad1.Models.RandomReciepeApiResponse;
 
 import java.lang.ref.Cleaner;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -30,9 +31,9 @@ public class RequestManager {
         this.context = context;
     }
 
-    public void getRandomRecipes(RandomRecipeResponseListener listener){
+    public void getRandomRecipes(RandomRecipeResponseListener listener, List<String> tags){
       CallRandomRecipes callRandomRecipes=retrofit.create(CallRandomRecipes.class);
-      Call<RandomReciepeApiResponse> call=callRandomRecipes.callRandomRecipe(context.getString(R.string.api_key),"10");
+      Call<RandomReciepeApiResponse> call=callRandomRecipes.callRandomRecipe(context.getString(R.string.api_key),"10",tags);
       call.enqueue(new Callback<RandomReciepeApiResponse>() {
           @Override
           public void onResponse(Call<RandomReciepeApiResponse> call, Response<RandomReciepeApiResponse> response) {
@@ -53,8 +54,9 @@ public class RequestManager {
     private interface CallRandomRecipes{
         @GET("recipes/random")
             Call<RandomReciepeApiResponse> callRandomRecipe(
-                    @Query("apiKey") String apiKey,
-                   @Query("number")String number
-            );
+                @Query("apiKey") String apiKey,
+                @Query("number") String number,
+                @Query("tags") List<String> tags
+                );
     }
 }
