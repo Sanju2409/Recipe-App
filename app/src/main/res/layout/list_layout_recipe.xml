@@ -12,12 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@color/grey"
         >
         <TextView
             android:id="@+id/textview_title"
             android:text="Dish Name"
             android:textStyle="bold"
-            android:textColor="@color/orange"
+            android:textColor="@color/recipename"
             android:textSize="22sp"
             android:padding="8dp"
             android:singleLine="true"
@@ -29,6 +30,7 @@
         <ImageView
             android:id="@+id/imageView_food"
             android:scaleType="centerCrop"
+            android:background="@color/recipebg"
             android:layout_margin="8dp"
             android:layout_width="wrap_content"
             android:layout_height="200dp"/>

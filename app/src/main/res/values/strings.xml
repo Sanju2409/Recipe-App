@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ReciepeMAD1</string>
-    <string name="api_key">dfcc2a4e160b44a28f0786658f8e4298</string>
+<!--    <string name="api_key">dfcc2a4e160b44a28f0786658f8e4298</string>-->
+    <string name="api_key">de0599fa570347b587e7fcaf7d5e0744</string>
     <string-array name="tags">
         <item>main course</item>
         <item>side dish</item>

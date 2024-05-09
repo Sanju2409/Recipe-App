@@ -57,7 +57,25 @@
                 android:layout_height="wrap_content"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_meal_instructions"
+                android:background="@color/recipebg"
                 android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:text="Ingredients"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="8dp"
+                android:background="@color/recipebg"
+                android:id="@+id/recycler_meal_ingredients"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <TextView
@@ -72,21 +90,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_meal_similar"
                 android:layout_margin="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:text="Ingredients"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:gravity="center"
-                android:padding="8dp"
-                android:textColor="@color/black"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_margin="8dp"
-                android:id="@+id/recycler_meal_ingredients"
+                android:background="@color/recipebg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </LinearLayout>

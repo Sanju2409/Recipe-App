@@ -3,5 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#FF5722</color>
-    <color name="yellow">#FFFF00</color>
+    <color name="yellow">#ffc40c</color>
+    <color name="grey">#ffe182</color>
+    <color name="recipebg">#ffd75a</color>
+    <color name="recipename">#201800</color>
+    <color name="lightblue">#ffffcf</color>
 </resources>

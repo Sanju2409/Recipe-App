@@ -63,6 +63,7 @@ SearchView searchView;
                 return false;
             }
         });
+
         spinner=findViewById(R.id.spinner_tags);
         ArrayAdapter arrayAdapter=ArrayAdapter.createFromResource(
                 this,

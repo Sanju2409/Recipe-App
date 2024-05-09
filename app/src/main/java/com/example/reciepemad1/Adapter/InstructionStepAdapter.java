@@ -37,12 +37,13 @@ public class InstructionStepAdapter extends RecyclerView.Adapter<InstructionStep
 
     holder.recycler_instruction_ingredients.setHasFixedSize(true);
     holder.recycler_instruction_ingredients.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
-InstructionsIngredientAdapter instructionsIngredientAdapter=new InstructionsIngredientAdapter(context,list.get(position).ingredients);
-holder.recycler_instruction_ingredients.setAdapter(instructionsIngredientAdapter);
-holder.recycler_instruction_equipments.setHasFixedSize(true);
-holder.recycler_instruction_equipments.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+    InstructionsIngredientAdapter instructionsIngredientAdapter=new InstructionsIngredientAdapter(context,list.get(position).ingredients);
+    holder.recycler_instruction_ingredients.setAdapter(instructionsIngredientAdapter);
+
+    holder.recycler_instruction_equipments.setHasFixedSize(true);
+    holder.recycler_instruction_equipments.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
     InstructionsEquipmentAdapter instructionsEquipmentAdapter=new InstructionsEquipmentAdapter(context,list.get(position).equipment);
-holder.recycler_instruction_equipments.setAdapter(instructionsEquipmentAdapter);
+    holder.recycler_instruction_equipments.setAdapter(instructionsEquipmentAdapter);
     }
 
     @Override
@@ -51,8 +52,8 @@ holder.recycler_instruction_equipments.setAdapter(instructionsEquipmentAdapter);
     }
 }
 class InstructionStepViewHolder extends RecyclerView.ViewHolder{
-TextView textview_instruction_step_number,textview_instruction_step_title;
-RecyclerView recycler_instruction_equipments,recycler_instruction_ingredients;
+    TextView textview_instruction_step_number,textview_instruction_step_title;
+    RecyclerView recycler_instruction_equipments,recycler_instruction_ingredients;
     public InstructionStepViewHolder(@NonNull View itemView) {
         super(itemView);
         textview_instruction_step_number=itemView.findViewById(R.id.textview_instruction_step_number);

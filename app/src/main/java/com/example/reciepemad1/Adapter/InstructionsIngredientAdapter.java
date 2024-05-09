@@ -1,6 +1,7 @@
 package com.example.reciepemad1.Adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,10 +34,12 @@ public class InstructionsIngredientAdapter extends RecyclerView.Adapter<Instruct
 
     @Override
     public void onBindViewHolder(@NonNull InstructionsIngredientViewHolder holder, int position) {
-holder.textview_instructions_step_item.setText(list.get(position).name);
+    holder.textview_instructions_step_item.setText(list.get(position).name);
     holder.textview_instructions_step_item.setSelected(true);
-        Picasso.get().load("https://img.spoonacular.com/ingredients_100x100/"+list.get(position).image).into(holder.imageView_instructions_step_items);
+//        Picasso.get().load("https://img.spoonacular.com/ingredients_100x100/"+list.get(position).image).into(holder.imageView_instructions_step_items);
 
+
+        Picasso.get().load(list.get(position).image).into(holder.imageView_instructions_step_items);
     }
 
     @Override

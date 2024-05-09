@@ -34,9 +34,9 @@ List<InstructionsResponse> list;
     public void onBindViewHolder(@NonNull InstrucionsViewHolder holder, int position) {
      holder.textview_instruction_name.setText(list.get(position).name);
      holder.recycler_instruction_steps.setHasFixedSize(true);
-holder.recycler_instruction_steps.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
-   InstructionStepAdapter stepAdapter=new InstructionStepAdapter(context,list.get(position).steps);
-   holder.recycler_instruction_steps.setAdapter(stepAdapter);
+     holder.recycler_instruction_steps.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
+      InstructionStepAdapter stepAdapter=new InstructionStepAdapter(context,list.get(position).steps);
+      holder.recycler_instruction_steps.setAdapter(stepAdapter);
     }
 
     @Override
