@@ -49,15 +49,38 @@
                 android:textSize="14sp"
                 android:text="Summary"
                 android:layout_margin="8dp"
+                android:textColor="@color/black"
+                android:maxLines="5"
                 android:textStyle="normal"
                 android:padding="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_meal_instructions"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="Similar Recipes"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:padding="8dp"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_meal_similar"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
             <TextView
                 android:text="Ingredients"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:gravity="center"
+                android:padding="8dp"
                 android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
